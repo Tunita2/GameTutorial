@@ -51,7 +51,7 @@ public class Enemy extends Entity{
 		attackBox.x = hitbox.x - attackBoxOffsetX;
 		attackBox.y = hitbox.y;
 	}
-	
+//	Add
 	protected void updateAttackBoxFlip() {
 		if (walkDir == RIGHT)
 			attackBox.x = hitbox.x + hitbox.width;
@@ -60,7 +60,7 @@ public class Enemy extends Entity{
 
 		attackBox.y = hitbox.y;
 	}
-	
+//	Add
 	protected void initAttackBox(int w, int h, int attackBoxOffsetX) {
 		attackBox = new Rectangle2D.Float(x, y, (int) (w * Game.SCALE), (int) (h * Game.SCALE));
 		this.attackBoxOffsetX = (int) (Game.SCALE * attackBoxOffsetX);
@@ -71,7 +71,7 @@ public class Enemy extends Entity{
 			inAir = true;
 		firstUpdate = false;
 	}
-	
+//	Add
 	protected void inAirChecks(int[][] lvlData, Playing playing) {
 		if (state != HIT && state != DEAD) {
 			updateInAir(lvlData);
@@ -131,7 +131,7 @@ public class Enemy extends Entity{
 		int absValue = (int) Math.abs(player.hitbox.x - hitbox.x);
 		return absValue <= attackDistance * 5;
 	}
-
+// Add component
 	protected boolean isPlayerCloseForAttack(Player player) {
 		int absValue = (int) Math.abs(player.hitbox.x - hitbox.x);
 		switch (enemyType) {
@@ -152,12 +152,14 @@ public class Enemy extends Entity{
 //	}
 
 	public void hurt(int amount) {
+//		Remove
 //		currentHealth -= amount;
 //		if (currentHealth <= 0)
 //			newState(DEAD);
 //		else
 //			newState(HIT);
-		
+
+//		Add
 		currentHealth -= amount;
 		if (currentHealth <= 0)
 			newState(DEAD);
@@ -173,10 +175,12 @@ public class Enemy extends Entity{
 	}
 
 	protected void checkPlayerHit(Rectangle2D.Float attackBox, Player player) {
+//Remove
 //		if (attackBox.intersects(player.hitbox))
 //			player.changeHealth(-GetEnemyDmg(enemyType));
 //		attackChecked = true;
-		
+	
+//		Add
 		if (attackBox.intersects(player.hitbox))
 			player.changeHealth(-GetEnemyDmg(enemyType), this);
 		else {
@@ -185,7 +189,7 @@ public class Enemy extends Entity{
 		}
 		attackChecked = true;
 	}
-
+//Add component
 	protected void updateAnimationTick() {
 		aniTick++;
 		if (aniTick >= ANI_SPEED) {
@@ -230,7 +234,7 @@ public class Enemy extends Entity{
 		newState(IDLE);
 		active = true;
 		airSpeed = 0;
-
+//		Add
 		pushDrawOffset = 0;
 	}
 	
@@ -252,7 +256,7 @@ public class Enemy extends Entity{
 	public boolean isActive() {
 		return active;
 	}
-	
+//	Add
 	public float getPushDrawOffset() {
 		return pushDrawOffset;
 	}
