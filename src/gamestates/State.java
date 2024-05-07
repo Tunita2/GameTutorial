@@ -6,6 +6,7 @@ import main.Game;
 import ui.MenuButton;
 
 public class State {
+	
 	protected Game game;
 
 	public State(Game game) {
@@ -19,7 +20,7 @@ public class State {
 	public Game getGame() {
 		return game;
 	}
-
+	@SuppressWarnings("incomplete-switch")
 	public void setGamestate(Gamestate state) {
 //		switch (state) {
 //		case MENU -> game.getAudioPlayer().playSong(AudioPlayer.MENU_1);
