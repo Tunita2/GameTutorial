@@ -1,21 +1,7 @@
 package levels;
 
-import static utilz.Constants.EnemyConstants.CRABBY;
-import static utilz.Constants.EnemyConstants.PINKSTAR;
-import static utilz.Constants.EnemyConstants.SHARK;
-import static utilz.Constants.ObjectConstants.BARREL;
-import static utilz.Constants.ObjectConstants.BLUE_POTION;
-import static utilz.Constants.ObjectConstants.BOX;
-import static utilz.Constants.ObjectConstants.CANNON_LEFT;
-import static utilz.Constants.ObjectConstants.CANNON_RIGHT;
-import static utilz.Constants.ObjectConstants.RED_POTION;
-import static utilz.Constants.ObjectConstants.SPIKE;
-import static utilz.Constants.ObjectConstants.TREE_ONE;
-import static utilz.Constants.ObjectConstants.TREE_THREE;
-import static utilz.Constants.ObjectConstants.TREE_TWO;
-import static utilz.HelpMethods.GetCrabs;
-import static utilz.HelpMethods.GetLevelData;
-import static utilz.HelpMethods.GetPlayerSpawn;
+import static utilz.Constants.EnemyConstants.*;
+import static utilz.Constants.ObjectConstants.*;
 
 import java.awt.Color;
 import java.awt.Point;

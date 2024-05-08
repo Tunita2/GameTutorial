@@ -51,7 +51,7 @@ public class EnemyManager {
 		this.currentLevel = level;
 	}
 // Add component
-	public void update(int[][] lvlData, Player player) {
+	public void update(int[][] lvlData) {
 		boolean isAnyActive = false;
 		for (Crabby c : currentLevel.getCrabs())
 			if (c.isActive()) {
