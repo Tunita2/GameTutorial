@@ -14,8 +14,7 @@ import java.awt.geom.Rectangle2D;
 import main.Game;
 
 public class Crabby extends Enemy{
-//	To enemy
-//	private int attackBoxOffsetX;
+	private int attackBoxOffsetX;
 
 	public Crabby(float x, float y) {
 		super(x, y, CRABBY_WIDTH, CRABBY_HEIGHT, CRABBY);
@@ -33,11 +32,11 @@ public class Crabby extends Enemy{
 		updateAnimationTick();
 		updateAttackBox();
 	}
-//	To Enemy
-//	private void updateAttackBox() {
-//		attackBox.x = hitbox.x - attackBoxOffsetX;
-//		attackBox.y = hitbox.y;
-//	}
+
+	private void updateAttackBox() {
+		attackBox.x = hitbox.x - attackBoxOffsetX;
+		attackBox.y = hitbox.y;
+	}
 
 	private void updateBehavior(int[][] lvlData, Player player) {
 		if (firstUpdate)
