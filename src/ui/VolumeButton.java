@@ -62,7 +62,8 @@ public class VolumeButton extends PauseButton{
 			buttonX = maxX;
 		else
 			buttonX = x;
-		updateFloatValue();
+//		Remove
+//		updateFloatValue();
 		bounds.x = buttonX - VOLUME_WIDTH / 2;
 
 	}
